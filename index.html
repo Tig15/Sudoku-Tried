@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sudoku Game</title>
+    <style>
+      body {
+        background-color: rgba(105, 103, 100, 0.34);
+      }
+      .sudo{
+        text-align: center;
+        padding: 12px;
+        font-weight: 200;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border-bottom: 5px solid rgba(165, 144, 126, 0.833);
+        font-size: 40px;
+        background: linear-gradient(#808080bb, #d1c99fc8);
+        border-radius: 10px;
+      }
+      #gameBoard {
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        border: 50px solid rgb(86, 85, 85);
+        border-radius: 20px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+      .square {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        font-size: 20px;
+      }
+      .square input {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        font-size: inherit;
+        border: none;
+        background-color: transparent;
+      }
+      .invalid {
+        background-color: rgb(153, 95, 105);
+      }
+      #newGame{
+        position: absolute;
+        top: 75%;
+        left: 40%;
+        background-color: transparent;
+        color: rgb(209, 200, 187);
+        cursor: pointer;
+        border-color: rgba(255, 228, 196, 0.636);
+      }
+      #checkBoard{
+        position: absolute;
+        top: 75%;
+        left: 55%;
+        background-color: transparent;
+        color: rgb(209, 200, 187);
+        cursor: pointer;
+        border-color: rgba(255, 228, 196, 0.636);
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="sudo">
+        Let's Begin Sudoku
+    </h2>
+    <div id="gameBoard"></div>
+    <button id="newGame">New Game</button>
+    <button id="checkBoard">Check Board</button>
+    <script src="sudoku.js"></script>
+  </body>
+</html>
